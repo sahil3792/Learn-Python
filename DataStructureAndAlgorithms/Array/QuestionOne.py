@@ -1,3 +1,5 @@
+#WAP using to remove the duplicate elements in an array
+
 import numpy
 Size = int(input("Enter Size of Array :- "))
 Array=[]
@@ -8,12 +10,23 @@ def RemoveDuplicate(Array):
         print("i iteration:- ",i)
         if i > len(Array):
             break 
-
         for j in range(i+1,len(Array)):
             print("J iteration:- ",j)
             if j < len(Array):
-                if Array[i] == Array[j]:
-                    Array.pop(j)
+                if len(Array)>1:
+                        
+                    while Array[i]==Array[j]:
+                        
+                        Array.pop(j)
+                        print("pop")
+                        print("after popping j value = ",j)
+                        print(len(Array))
+                        print(Array)
+                    
+        #     print("J iteration:- ",j)
+        #     if j < len(Array):
+        #         if Array[i] == Array[j]:
+        #             Array.pop(j)
 
             print(Array)
         
